@@ -12,7 +12,7 @@ const getArts = async (req, res) => {
             include: [{
                 model: Comment,
                 as: 'comments',
-                attributes: ['id', 'content', 'name', 'user_id'],
+                attributes: ['id', 'content', 'name', ['user_id', 'userID']],
             }]
         });
         if (arts.length) {
@@ -40,7 +40,7 @@ const getArtById = async (req, res) => {
             include: [{
                 model: Comment,
                 as: 'comments',
-                attributes: ['id', 'content', 'name', 'user_id'],
+                attributes: ['id', 'content', 'name', ['user_id', 'userID']],
             }]
         });
         if (art) {
