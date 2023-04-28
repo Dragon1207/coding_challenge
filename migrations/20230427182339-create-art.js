@@ -9,25 +9,63 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
-        allowNull: false,
-        type: Sequelize.STRING
+      accession_number: {
+        type: Sequelize.STRING,
       },
       artist: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+      },
+      artistRole: {
+        type: Sequelize.STRING,
+      },
+      artistId: {
+        type: Sequelize.INTEGER,
+      },
+      title: {
+        type: Sequelize.STRING(500),
+        defaultValue: "[no title]"
+      },
+      dateText: {
+        type: Sequelize.STRING,
+      },
+      medium: {
+        type: Sequelize.STRING,
+      },
+      creditLine: {
+        type: Sequelize.TEXT,
       },
       year: {
-        allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+      acquisitionYear: {
+        type: Sequelize.INTEGER,
       },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+      dimensions: {
+        type: Sequelize.STRING,
+      },
+      width: {
+        type: Sequelize.FLOAT,
+      },
+      height: {
+        type: Sequelize.FLOAT,
+      },
+      depth: {
+        type: Sequelize.FLOAT,
+      },
+      units: {
+        type: Sequelize.STRING,
+      },
+      inscription: {
+        type: Sequelize.STRING,
+      },
+      thumbnailCopyright: {
+        type: Sequelize.TEXT,
+      },
+      thumbnailUrl: {
+        type: Sequelize.STRING,
+      },
+      url: {
+        type: Sequelize.STRING,
       }
     });
   },

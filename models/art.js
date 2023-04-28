@@ -18,22 +18,69 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Art.init({
-    title: {
+    accession_number: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     artist: {
       type: DataTypes.STRING,
-      allowNull: false,
+    },
+    artistRole: {
+      type: DataTypes.STRING,
+    },
+    artistId: {
+      type: DataTypes.INTEGER,
+    },
+    title: {
+      type: DataTypes.STRING(500),
+      defaultValue: "[no title]"
+    },
+    dateText: {
+      type: DataTypes.STRING,
+    },
+    medium: {
+      type: DataTypes.STRING,
+    },
+    creditLine: {
+      type: DataTypes.TEXT,
     },
     year: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+    },
+    acquisitionYear: {
+      type: DataTypes.INTEGER,
+    },
+    dimensions: {
+      type: DataTypes.STRING,
+    },
+    width: {
+      type: DataTypes.FLOAT,
+    },
+    height: {
+      type: DataTypes.FLOAT,
+    },
+    depth: {
+      type: DataTypes.FLOAT,
+    },
+    units: {
+      type: DataTypes.STRING,
+    },
+    inscription: {
+      type: DataTypes.STRING,
+    },
+    thumbnailCopyright: {
+      type: DataTypes.TEXT,
+    },
+    thumbnailUrl: {
+      type: DataTypes.STRING,
+    },
+    url: {
+      type: DataTypes.STRING,
     }
   }, {
     sequelize,
     modelName: 'Art',
-    tableName: 'arts'
+    tableName: 'arts',
+    timestamps: false,
   });
   return Art;
 };
