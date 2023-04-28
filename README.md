@@ -13,7 +13,8 @@ This is an API for the Tate Modern art collection data set. It allows users to c
 2. Install the necessary dependencies using `npm install`.
 3. Set up a PostgreSQL database and enter the database credentials in the `config/config.json` file.
 4. Create db and run the migration scripts using `npx sequelize-cli db:create & npx sequelize-cli db:migrate`.
-5. Start the server using `npm start`.
+5. Import csv file to the arts table.
+6. Start the server using `npm start`.
 
 ## Usage
 Make requests to the above endpoints to interact with the API. All responses are in JSON format.
